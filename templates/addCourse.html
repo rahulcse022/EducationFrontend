@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>addCourse - E-Learning</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="">E-Learning</a></h1>
+
+
+      <a href="courses" class="get-started-btn">Get Started</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact" style="margin-top: 100px;">
+
+      <div class="container" data-aos="fade-up" >
+
+        <h3>Add Course</h3>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="/contact" method="post"  class="php-email-form" onsubmit="window.location.href = 'http://127.0.0.1:8000/contact'">
+                {% csrf_token %}
+              <div class="row">
+
+                <div class="col-md-4 form-group">
+                  <input type="number" name="id" class="form-control" id="id" placeholder="Course ID" required>
+                </div>
+
+
+                <div class="col-md-4 form-group">
+                  <input type="text" name="coursename" class="form-control" id="coursename" placeholder="Course Name" required>
+                </div>
+
+
+                <div class="col-md-4 form-group">
+                  <input type="text" name="price" class="form-control" id="price" placeholder="Course Price" required>
+                </div>
+
+
+              <div class="col-md-4  mt-4 form-group">
+                <input type="text" class="form-control" name="trainer" id="trainer" placeholder="Trainer Name" required>
+              </div>
+
+              <div class="form-group mt-4 col-md-4" style="    width: 506px;">
+                <input type="text" name="detail" class="form-control" id="detail" placeholder="Sort Description" required>
+              </div>
+
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="image" id="image" placeholder="Image Link" required>
+              </div>
+
+
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="video" id="video" placeholder="Video Link" required>
+              </div>
+
+
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="button" id="button" placeholder="button Link" required>
+              </div>
+
+              
+
+              <div class="form-group mt-4 md-5" style="    width: 300px;">
+                <input type="file" class="custom-file-input" id="customFile">
+                <!-- <label class="custom-file-label" for="customFile">Choose file</label> -->
+              </div>
+
+
+
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="desc" id="desc" rows="5" placeholder="Course Description" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit"   >Add Course</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+ 
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
